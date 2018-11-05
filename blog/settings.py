@@ -27,8 +27,8 @@ SECRET_KEY = '8+o$g8v9i6ue%=bct7mpvqe=&6hxmd%w2y336t#%rtrr89cxzm'
 #
 # ALLOWED_HOSTS = []
 
-# DEBUG = False
-DEBUG = True
+DEBUG = False
+# DEBUG = True
 ALLOWED_HOSTS=['*',]
 
 AUTH_USER_MODEL = 'userapp.BlogUser'
@@ -131,10 +131,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 #静态文件
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
-# STATIC_ROOT = os.path.join(BASE_DIR,'static')
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 #分页配置
 PAGINATION_SETTINGS = {
