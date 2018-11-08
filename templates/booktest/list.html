@@ -38,7 +38,7 @@
                                         <a class="comment" href="##comment" title="评论" target="_blank"><i
                                                 class="glyphicon glyphicon-comment"></i>{{ post.comment_set.count }}</a>
                                     </p>
-                                    <p class="note">{{ post.content }}</p>
+                                    <p class="note">{{ post.content|safe }}</p>
                                 </article>
                             {% endfor %}
                             {% include "booktest/_pagination.html" %}
@@ -105,13 +105,14 @@
                 </ul>
             </div>
             <div class="widget widget_sentence">
-                <a href="http://www.baidu.com//" target="_blank" rel="nofollow" title="专业网站建设">
-                    <img style="width: 100%" src="static/img/timg.jpeg"
-                         alt="专业网站建设"></a>
+                <a href="http://www.baidu.com//" target="_blank" rel="nofollow" title="">
+                    <img style="width: 100%" src="/static/images/post/桌面1.jpeg" alt="">
+                </a>
             </div>
             <div class="widget widget_sentence">
                 <a href="http://www.baidu.com/show/269.html" target="_blank" rel="nofollow" title="MZ-NetBlog主题">
-                    <img style="width: 100%" src="static/images/post/桌面1.jpeg" alt="MZ-NetBlog主题"></a>
+                    <img style="width: 100%" src="/static/images/post/桌面1.jpeg" alt=>
+                </a>
             </div>
         </aside>
     </section>

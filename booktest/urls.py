@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from . import views
-
+from django.views.static import serve
+from django.conf import settings
 urlpatterns = [
     url(r'^$',views.index,name='index'),
     url(r'^search$', views.search, name='search'),
@@ -16,7 +17,8 @@ urlpatterns = [
     url(r'^forget/', views.forget),
     url(r'^newpwd/', views.newpwd),
     url(r'^reset/(?P<active_code>[a-zA-Z0-9]+)', views.reset),
-
+    url(r'^admin/upload/(?P<dir_name>[^/]+)$', views.upload_image, name='upload_image'),
+url(r'^upload/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT, }),
 
 
 

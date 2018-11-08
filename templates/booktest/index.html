@@ -51,7 +51,7 @@
                         <span class="red">【推荐】</span>
                         <a target="_blank" href="#" title="{{ post.title }}">{{ post.title }}</a>
                     </h2>
-                    <p class="note">{{ post.content }}</p>
+                    <p class="note">{{ post.content|safe }}</p>
                 </article>
             {% endfor %}
             <div class="title">

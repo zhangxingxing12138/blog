@@ -153,3 +153,5 @@ EMAIL_HOST_USER = 'django_eamil_test@163.com'
 EMAIL_HOST_PASSWORD = 'wwy123456789'
 #收件人看到的发件人
 EMAIL_FROM = 'python<django_eamil_test@163.com>'
+MEDIA_URL='/upload/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'upload')
